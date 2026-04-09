@@ -1,5 +1,5 @@
 title: rayvn
-description: A bash shared library ecosystem
+description: A shared library ecosystem for bash 5.3+.
 remote_theme: just-the-docs/just-the-docs
 color_scheme: dark
 url: https://rayvn.ink
