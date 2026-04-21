@@ -1,27 +1,42 @@
-<button id="theme-toggle" class="btn"></button>
+<button id="theme-toggle" class="btn">☀️ Light</button>
 
 <script>
-  (function () {
-    function init() {
-      var btn = document.getElementById('theme-toggle');
-      if (!btn || typeof jtd === 'undefined') return;
+(function () {
+  function _themeLink() {
+    return document.querySelector('link[href*="just-the-docs-"]');
+  }
 
-      function updateLabel() {
-        btn.textContent = jtd.getTheme() === 'dark' ? '☀️ Light mode' : '🌙 Dark mode';
-      }
+  function _sync() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var link = _themeLink();
+    var isLight = link && /just-the-docs-light\.css/.test(link.getAttribute('href'));
+    btn.textContent = isLight ? '🌙 Dark' : '☀️ Light';
+  }
 
-      btn.addEventListener('click', function () {
-        jtd.setTheme(jtd.getTheme() === 'dark' ? 'light' : 'dark');
-        updateLabel();
-      });
+  function _init() {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
 
-      updateLabel();
-    }
+    btn.addEventListener('click', function () {
+      var link = _themeLink();
+      if (!link) return;
+      var href = link.getAttribute('href');
+      var goLight = !/just-the-docs-light\.css/.test(href);
+      link.setAttribute('href', goLight
+        ? href.replace(/just-the-docs-\w+\.css/, 'just-the-docs-light.css')
+        : href.replace('just-the-docs-light.css', 'just-the-docs-default.css'));
+      localStorage.setItem('rayvn-color-scheme', goLight ? 'light' : 'dark');
+      _sync();
+    });
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
-  })();
+    _sync();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', _init);
+  } else {
+    _init();
+  }
+})();
 </script>

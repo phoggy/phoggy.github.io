@@ -8,7 +8,8 @@ nav_order: 1
 
 A shared library ecosystem for bash 5.3+.
 
-rayvn lets bash programs load shared libraries — both built-in and from third-party projects — using a simple `require` system.
+See the [README](https://github.com/phoggy/rayvn#readme) on GitHub for a quick introduction, installation instructions and development setup.
+
 
 ---
 
@@ -24,13 +25,3 @@ Encrypted file archive tool built on [age](https://github.com/FiloSottile/age) e
 Encrypted Bitwarden vault backup tool. Uses rayvn and valt.
 
 ---
-
-## Getting Started
-
-```bash
-# Install rayvn
-nix run github:phoggy/rayvn
-
-# Use a library in your script
-source rayvn.up 'rayvn/core'
-```
