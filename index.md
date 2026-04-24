@@ -15,9 +15,9 @@ See the [README](https://github.com/phoggy/rayvn#readme) on GitHub for a quick i
 ## Related Projects
 
 ### [valt](/valt)
-Encrypted file archive tool built on [age](https://github.com/FiloSottile/age) encryption. Uses rayvn shared libraries.
+Encrypt file archives using [age](https://github.com/FiloSottile/age) encryption. Built with rayvn.'
 
 ### [wardn](/wardn)
-Encrypted Bitwarden vault backup tool. Uses rayvn and valt.
+Encrypted Bitwarden vault backups. Built with rayvn and valt.
 
 ---
