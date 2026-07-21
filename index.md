@@ -6,7 +6,7 @@ nav_order: 1
 
 # rayvn
 
-A shared library ecosystem for bash 5.3+.
+A shared library based ecosystem for bash 5.3+.
 
 ### [rayvn](/rayvn) docs
 
@@ -23,3 +23,4 @@ Encrypt file archives using [age](https://github.com/FiloSottile/age) encryption
 Encrypted Bitwarden vault backups. Built with rayvn and valt.
 
 ---
+
