@@ -1,7 +1,9 @@
 title: rayvn
 description: A shared library based ecosystem for bash 5.3+.
 remote_theme: just-the-docs/just-the-docs
+favicon_ico: "/assets/images/favicon.ico"
 color_scheme: dark
+attribution: 'favicon by <a href="https://www.flaticon.com/free-icons/crow" title="flaticons">Imogen.Oh</a>'
 url: https://rayvn.ink
 
 nav_external_links:

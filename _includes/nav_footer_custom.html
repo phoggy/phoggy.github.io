@@ -1,4 +1,7 @@
-<button id="theme-toggle" class="btn">☀️ Light</button>
+<div style="display: flex; align-items: baseline; gap: 1.25rem;">
+  <button id="theme-toggle" class="btn">☀️ Light</button>
+  {% if site.attribution %}<span style="margin-left: auto; font-size: 0.75em; font-style: italic;">{{ site.attribution }}</span>{% endif %}
+</div>
 
 <script>
 (function () {
